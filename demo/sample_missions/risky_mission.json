@@ -1,0 +1,27 @@
+{
+  "name": "High-Risk Rescue Mission",
+  "description": "Emergency response near restricted airspace",
+  "waypoints": [
+    {
+      "lat": 37.7749,
+      "lng": -122.4194,
+      "altitude": 100
+    },
+    {
+      "lat": 37.6213,
+      "lng": -122.3789,
+      "altitude": 150
+    },
+    {
+      "lat": 37.6,
+      "lng": -122.35,
+      "altitude": 200
+    }
+  ],
+  "battery_capacity": 60.0,
+  "max_speed": 12.0,
+  "weather_conditions": {
+    "wind_speed": 18.0,
+    "gust_speed": 25.0
+  }
+}

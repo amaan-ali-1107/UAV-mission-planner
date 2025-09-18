@@ -13,7 +13,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'backend'))
 from app.models.risk_model import RiskPredictor, Mission, Waypoint
 from app.models.route_optimizer import RouteOptimizer
 from app.models.simulator import MissionSimulator
-from app.api.weather import WeatherService
+from app.services.weather_service import WeatherService
 import logging
 
 def setup_logging():
@@ -251,7 +251,11 @@ def generate_demo_summary(results):
         success_icon = "✅" if result['simulation_success'] else "❌"
         
         print(f"\n   Scenario {i}: {scenario}")
-        print(f"      Risk Score: {result.get('risk_score', 'N/A'):.3f}")
+        score = result.get('risk_score', 'N/A')
+        if isinstance(score, (int, float)):
+            print(f"      Risk Score: {score:.3f}")
+        else:
+            print(f"      Risk Score: {score}")
         if 'risk_reduction_pct' in result:
             print(f"      Risk Reduction: {result['risk_reduction_pct']:.1f}%")
         print(f"      Simulation: {success_icon} ({'Success' if result['simulation_success'] else 'Failed'})")

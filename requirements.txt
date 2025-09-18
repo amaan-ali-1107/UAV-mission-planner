@@ -21,3 +21,4 @@ geopy
 shapely
 matplotlib
 seaborn
+aiohttp

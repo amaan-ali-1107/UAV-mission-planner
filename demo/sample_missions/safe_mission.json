@@ -1,0 +1,23 @@
+{
+  "name": "Safe Patrol Mission",
+  "description": "Routine surveillance in good conditions",
+  "waypoints": [
+    {
+      "lat": 37.7749,
+      "lng": -122.4194,
+      "altitude": 100
+    },
+    {
+      "lat": 37.7849,
+      "lng": -122.4094,
+      "altitude": 120
+    },
+    {
+      "lat": 37.7949,
+      "lng": -122.3994,
+      "altitude": 100
+    }
+  ],
+  "battery_capacity": 90.0,
+  "max_speed": 15.0
+}
